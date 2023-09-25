@@ -9,7 +9,7 @@
     "test:watch": "vitest watch",
     "coverage": "vitest --coverage",
     "prebuild": "rm -rf dist",
-    "postbuild": "cp -r src/templates dist/templates",
+    "postbuild": "cp -r src/templates/** dist/templates",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "prepare": "husky install"
