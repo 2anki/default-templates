@@ -1,0 +1,50 @@
+{
+  "name": "@2anki/default-templates",
+  "version": "0.0.0",
+  "description": "default templates for 2anki",
+  "main": "dist/default-templates.js",
+  "scripts": {
+    "build": "npm run prebuild; tsc && vite build; npm run postbuild",
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "coverage": "vitest --coverage",
+    "prebuild": "rm -rf dist",
+    "postbuild": "cp -r src/templates dist/templates",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2anki/default-templates.git"
+  },
+  "keywords": [
+    "notion",
+    "title",
+    "page",
+    "title"
+  ],
+  "author": "Alexander Alemayhu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/2anki/default-templates/issues"
+  },
+  "homepage": "https://github.com/2anki/default-templates#readme",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "eslint": "^8.46.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.28.1",
+    "rollup-plugin-typescript-paths": "^1.4.0",
+    "semantic-release": "^21.1.1",
+    "tslib": "^2.6.0",
+    "vitest": "^0.34.3",
+    "husky": "^7.0.0"
+  },
+  "directories": {
+    "lib": "dist"
+  }
+}
